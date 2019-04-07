@@ -19,14 +19,31 @@ export class CalculatorComponent implements OnInit {
     { text: '-', cols: 1, rows: 1, color: 'lightblue' },
     { text: '*', cols: 1, rows: 1, color: 'lightblue' },
     { text: '/', cols: 1, rows: 1, color: 'lightblue' },
+
+    { text: '7', cols: 1, rows: 1, color: 'lightblue' },
+    { text: '8', cols: 1, rows: 1, color: 'lightblue' },
+    { text: '9', cols: 1, rows: 1, color: 'lightblue' },
+    { text: ' ', cols: 1, rows: 1, color: 'lightblue' },
+
+    { text: '4', cols: 1, rows: 1, color: 'lightblue' },
+    { text: '5', cols: 1, rows: 1, color: 'lightblue' },
+    { text: '6', cols: 1, rows: 1, color: 'lightblue' },
+    { text: ' ', cols: 1, rows: 1, color: 'lightblue' },
+
+    { text: '1', cols: 1, rows: 1, color: 'lightblue' },
+    { text: '2', cols: 1, rows: 1, color: 'lightblue' },
+    { text: '3', cols: 1, rows: 1, color: 'lightblue' },
+    { text: ' ', cols: 1, rows: 1, color: 'lightblue' },
+
+    { text: '0', cols: 4, rows: 1, color: 'lightblue' },
   ];
 
-  inputValue: string;
+  inputValue: string = '';
   sum: number;
 
-  clicked(operator, value1) {
-    console.log(operator);
-    this.inputValue = value1 + operator ;
+  clicked(gridValue) {
+    console.log(gridValue);
+    this.inputValue = this.inputValue + gridValue;
   }
 
   calculate(lastVal) {

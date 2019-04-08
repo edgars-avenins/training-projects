@@ -1,8 +1,8 @@
 <h1>Simple Calculator coming up here!</h1>
 <p>Description to follow here</p>
 <div class="calcContainer">
-  <input type="text" #input value="{{inputValue}}"/>
-  <button (click)="calculate(input.value)">Calculate</button>
+  <input type="text" value="{{inputValue}}"/>
+  <button (click)="calculate()">Calculate</button>
   <mat-grid-list cols="4" rowHeight="3:1">
     <mat-grid-tile *ngFor="let tile of tiles"
                    [colspan]="tile.cols"

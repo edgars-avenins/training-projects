@@ -1,8 +1,9 @@
 <h1>Simple Calculator coming up here!</h1>
 <p>Description to follow here</p>
 <div class="calcContainer">
-  <input type="text" value="{{inputValue}}"/>
+  <input type="text" value="{{inputValue}}" />
   <button (click)="calculate()">Calculate</button>
+  <h4>Result -->{{sum}}</h4>
   <mat-grid-list cols="4" rowHeight="3:1">
     <mat-grid-tile *ngFor="let tile of tiles"
                    [colspan]="tile.cols"
@@ -13,4 +14,4 @@
     </mat-grid-tile>
   </mat-grid-list>
 </div>
-<h4>{{sum}}</h4>
+<p>Pievieno ar laiku to ka paradas grafiks kurs attelo tavus inputus ???, unit conversion, u.tml lietas liec ieksaa te lai kalkulatorigas/matematiskas lietas ir vienuviet</p>

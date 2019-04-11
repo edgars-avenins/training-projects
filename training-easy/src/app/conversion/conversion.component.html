@@ -1,0 +1,17 @@
+<ng-container>
+  <input #uInput type="number" name="convInput" value="" />
+  <select #opt1>
+    <option *ngFor="let conv of conversionRates"
+            value="{{conv.conversion}}">
+      {{conv.conversion}}
+    </option>
+  </select>
+  <select #opt2>
+    <option *ngFor="let conv of conversionRates"
+            value="{{conv.conversion}}">
+      {{conv.conversion}}
+    </option>
+  </select>
+  <button type="submit" (click)="conversionType(opt1.value, opt2.value, uInput.value)">Convert</button>
+  <output>{{result}}</output>
+</ng-container>

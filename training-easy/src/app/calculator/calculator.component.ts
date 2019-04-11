@@ -14,6 +14,7 @@ export interface Tile {
 })
 export class CalculatorComponent implements OnInit {
 
+
   tiles: Tile[] = [
     { text: '+', cols: 1, rows: 1, color: 'lightblue' },
     { text: '-', cols: 1, rows: 1, color: 'lightblue' },
@@ -41,10 +42,12 @@ export class CalculatorComponent implements OnInit {
 
   inputValue: string = '';
   sum: number;
+ 
+
 
   clicked(gridValue) {
     if (gridValue == 'C' || gridValue ==  'DEL') {
-        this.calculatorDelete(gridValue);
+      this.calculatorDelete(gridValue);
     } else {
         this.inputValue = this.inputValue + gridValue;
     }
@@ -69,7 +72,6 @@ export class CalculatorComponent implements OnInit {
   remove() {
     var strLen = this.inputValue.length;
     this.inputValue = this.inputValue.slice(0, strLen-1);
-    console.log(this.inputValue);
   }
 
   constructor() { }

@@ -3,8 +3,9 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\calculator"
+    "\\src\\app\\calculator",
+    "\\src\\app\\conversion"
   ],
-  "SelectedNode": "\\src\\app\\calculator\\calculator.component.html",
+  "SelectedNode": "\\src\\app\\conversion\\conversion.component.ts",
   "PreviewInSolutionExplorer": false
 }

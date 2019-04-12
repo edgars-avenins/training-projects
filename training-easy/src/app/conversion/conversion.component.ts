@@ -1,7 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CONVRATESKILO, CONVRATESMETER, CONVRATESCENTI, CONVRATESMILI, CONVRATESMICRO, CONVRATESNANO } from '../conversionRatesData';
-import { type } from 'os';
-import { forEach } from '@angular/router/src/utils/collection';
 
 export interface ConversionRates {
   conversion: string;
@@ -34,7 +32,6 @@ export class ConversionComponent implements OnInit {
 
 
   conversionType(convFrom, convTo, userInput) {
-    console.log(convFrom, " ", convTo, " ", userInput);
 
     switch (convFrom) {
       case 'kilometer': {
@@ -44,27 +41,46 @@ export class ConversionComponent implements OnInit {
         });
 
         this.convert(x, userInput);
-        console.log(x.value);
         break;
       }
       case 'meter': {
-        console.log(convFrom);
+        var x = this.crMeter.find(function (element) {
+          return element.unit === convTo;
+        });
+
+        this.convert(x, userInput);
         break;
       }
       case 'centimeter': {
-        console.log(convFrom);
+        var x = this.crCenti.find(function (element) {
+          return element.unit === convTo;
+        });
+
+        this.convert(x, userInput);
         break;
       }
       case 'milimeter': {
-        console.log(convFrom);
+        var x = this.crMili.find(function (element) {
+          return element.unit === convTo;
+        });
+
+        this.convert(x, userInput);
         break;
       }
       case 'micrometer': {
-        console.log(convFrom);
+        var x = this.crMicro.find(function (element) {
+          return element.unit === convTo;
+        });
+
+        this.convert(x, userInput);
         break;
       }
       case 'nanometer': {
-        console.log(convFrom);
+        var x = this.crNano.find(function (element) {
+          return element.unit === convTo;
+        });
+
+        this.convert(x, userInput);
         break;
       }
       default: {
@@ -74,7 +90,6 @@ export class ConversionComponent implements OnInit {
   }
 
   convert(ratio, userInput) {
-    console.log(ratio, " * ", userInput);
     this.result = +ratio.value * +userInput;
   }
 
